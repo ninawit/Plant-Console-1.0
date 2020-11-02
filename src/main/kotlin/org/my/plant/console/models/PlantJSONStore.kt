@@ -55,6 +55,11 @@ class PlantJSONStore : PlantStore {
         serialize()
     }
 
+    override fun delete(plant: PlantModel) {
+        plants.remove(plant)
+        serialize()
+    }
+
     internal fun logAll() {
         plants.forEach { logger.info("${it}") }
     }

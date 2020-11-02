@@ -7,13 +7,6 @@
     "light": "part sun"
   },
   {
-    "id": 2308885356392251053,
-    "name": "Rose",
-    "type": "Outdoor",
-    "zone": "6a",
-    "light": "full sun"
-  },
-  {
     "id": -3993984825587283199,
     "name": "Cherry",
     "type": "Outdoor",
@@ -39,13 +32,6 @@
     "name": "Rose",
     "type": "Outdoor",
     "zone": "6a",
-    "light": "full sun"
-  },
-  {
-    "id": 1393879194015886340,
-    "name": "Cherry",
-    "type": "Outdoor",
-    "zone": "9a",
     "light": "full sun"
   }
 ]

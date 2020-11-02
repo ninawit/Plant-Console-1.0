@@ -7,8 +7,8 @@ import org.my.plant.console.views.PlantView
 
 class PlantController {
 
-//    val plants = PlantMemStore()
-    val plants = PlantJSONStore()
+//    val plants = PlantMemStore() //temporary storage
+    val plants = PlantJSONStore() //consistent storage
     val plantView = PlantView()
     val logger = KotlinLogging.logger {}
 
@@ -27,7 +27,8 @@ class PlantController {
                 2 -> update()
                 3 -> list()
                 4 -> search()
-                -99 -> dummyData()
+                5 -> delete()
+//                -99 -> dummyData()
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
             }
@@ -81,9 +82,24 @@ class PlantController {
         return foundPlacemark
     }
 
-    fun dummyData() {
-        plants.create(PlantModel(1, "Tulip", "Outdoor", "6a", "part sun"))
-        plants.create(PlantModel(2, "Rose", "Outdoor", "6a", "full sun"))
-        plants.create(PlantModel(3, "Cherry", "Outdoor", "9a", "full sun"))
+    fun delete() {
+        plantView.listPlants(plants)
+        var searchId = plantView.getId()
+        val aPlant = search(searchId)
+
+        if(aPlant != null) {
+            plants.delete(aPlant)
+            //added plant ID in to the println
+            println("Plant with ID: " + aPlant.id + " has now been deleted...")
+            plantView.listPlants(plants)
+        }
+        else
+            println("Plant Not Deleted...")
     }
+
+//    fun dummyData() {
+//        plants.create(PlantModel(1, "Tulip", "Outdoor", "6a", "part sun"))
+//        plants.create(PlantModel(2, "Rose", "Outdoor", "6a", "full sun"))
+//        plants.create(PlantModel(3, "Cherry", "Outdoor", "9a", "full sun"))
+//    }
 }

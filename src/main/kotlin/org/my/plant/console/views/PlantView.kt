@@ -15,6 +15,7 @@ class PlantView {
         println(" 2. Update Plant")
         println(" 3. List All Plants")
         println(" 4. Search Plants")
+        println(" 5. Delete Plant")
         println("-1. Exit")
         println()
         print("Please enter menu option: ")

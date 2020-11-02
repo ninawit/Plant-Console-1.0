@@ -44,6 +44,10 @@ class PlantMemStore : PlantStore {
         }
     }
 
+    override fun delete(plant: PlantModel) {
+        plants.remove(plant)
+    }
+
     internal fun logAll() {
         plants.forEach { logger.info("${it}") }
     }
