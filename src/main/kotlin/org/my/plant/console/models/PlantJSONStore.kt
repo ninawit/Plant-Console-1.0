@@ -49,14 +49,24 @@ class PlantJSONStore : PlantStore {
         if (foundPlant != null) {
             foundPlant.name = plant.name
             foundPlant.type = plant.type
+            foundPlant.fragrant = plant.fragrant
+            foundPlant.colour = plant.colour
+            foundPlant.height = plant.height
+            foundPlant.category = plant.category
             foundPlant.zone = plant.zone
             foundPlant.light = plant.light
+            foundPlant.season = plant.season
         }
         serialize()
     }
 
     override fun delete(plant: PlantModel) {
         plants.remove(plant)
+        serialize()
+    }
+    // TO DO....
+    override fun filter(plant: PlantModel){
+        plants.filter { PlantModel -> true }
         serialize()
     }
 

@@ -8,4 +8,5 @@ interface PlantStore {
     fun create(plant: PlantModel)
     fun update(plant: PlantModel)
     fun delete(plant: PlantModel)
+    fun filter(plant: PlantModel) //TO DO...
 }

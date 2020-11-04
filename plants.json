@@ -1,37 +1,74 @@
 [
   {
-    "id": -4315045338295117496,
-    "name": "Tulip",
-    "type": "Outdoor",
-    "zone": "6a",
-    "light": "part sun"
-  },
-  {
     "id": -3993984825587283199,
     "name": "Cherry",
     "type": "Outdoor",
+    "fragrant": "",
+    "colour": "",
+    "height": "",
+    "category": "",
     "zone": "9a",
-    "light": "full sun"
+    "light": "full sun",
+    "season": ""
   },
   {
     "id": -7730861179652696669,
-    "name": "a test",
-    "type": "a tes again",
-    "zone": "na",
-    "light": "na"
+    "name": "Narcissuss",
+    "type": "Outdoor",
+    "fragrant": "",
+    "colour": "",
+    "height": "",
+    "category": "",
+    "zone": "8a",
+    "light": "full sun",
+    "season": ""
   },
   {
     "id": 3137994050714225704,
     "name": "Tulip",
     "type": "Outdoor",
+    "fragrant": "",
+    "colour": "",
+    "height": "",
+    "category": "",
     "zone": "6a",
-    "light": "part sun"
+    "light": "part sun",
+    "season": ""
   },
   {
     "id": -6725805347924721324,
     "name": "Rose",
     "type": "Outdoor",
+    "fragrant": "",
+    "colour": "",
+    "height": "",
+    "category": "",
     "zone": "6a",
-    "light": "full sun"
+    "light": "full sun",
+    "season": ""
+  },
+  {
+    "id": 8026162675746557228,
+    "name": "test",
+    "type": "outdoor",
+    "fragrant": "yes",
+    "colour": "pink",
+    "height": "25",
+    "category": "flower",
+    "zone": "9",
+    "light": "full sun",
+    "season": "spring, summer"
+  },
+  {
+    "id": -5781674083518820977,
+    "name": "test2",
+    "type": "indoor",
+    "fragrant": "no",
+    "colour": "red",
+    "height": "15",
+    "category": "plant",
+    "zone": "na",
+    "light": "part sun",
+    "season": "na"
   }
 ]

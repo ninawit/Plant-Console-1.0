@@ -7,14 +7,12 @@ import org.my.plant.console.views.PlantView
 
 class PlantController {
 
-//    val plants = PlantMemStore() //temporary storage
     val plants = PlantJSONStore() //consistent storage
     val plantView = PlantView()
     val logger = KotlinLogging.logger {}
 
     init{
         logger.info { "Launching Plant Console App" }
-        println("Plant Kotlin App Version 1.0")
     }
 
     fun start() {
@@ -28,7 +26,7 @@ class PlantController {
                 3 -> list()
                 4 -> search()
                 5 -> delete()
-//                -99 -> dummyData()
+                6 -> filter()
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
             }
@@ -40,6 +38,7 @@ class PlantController {
     fun menu() :Int { return plantView.menu()}
 
     fun add(){
+
         var aPlant = PlantModel()
 
         if (plantView.addPlantData(aPlant))
@@ -68,28 +67,31 @@ class PlantController {
     }
 
     fun list() {
+
         plantView.listPlants(plants)
     }
 
     fun search() {
+
         val aPlant = search(plantView.getId())!!
         plantView.showPlant(aPlant)
     }
 
-
     fun search(id: Long) : PlantModel? {
+
         var foundPlacemark = plants.findOne(id)
         return foundPlacemark
     }
 
     fun delete() {
+
         plantView.listPlants(plants)
         var searchId = plantView.getId()
         val aPlant = search(searchId)
 
         if(aPlant != null) {
             plants.delete(aPlant)
-            //added plant ID in to the println
+            //add plant ID in to the println
             println("Plant with ID: " + aPlant.id + " has now been deleted...")
             plantView.listPlants(plants)
         }
@@ -97,9 +99,14 @@ class PlantController {
             println("Plant Not Deleted...")
     }
 
-//    fun dummyData() {
-//        plants.create(PlantModel(1, "Tulip", "Outdoor", "6a", "part sun"))
-//        plants.create(PlantModel(2, "Rose", "Outdoor", "6a", "full sun"))
-//        plants.create(PlantModel(3, "Cherry", "Outdoor", "9a", "full sun"))
-//    }
+    // TO DO
+    fun filter() {
+    }
 }
+
+//        var sc = Scanner(System.`in`)
+//        var num = sc.nextInt()
+//        println(num)
+
+//        var num1 = readLine()
+//        println(num1)
