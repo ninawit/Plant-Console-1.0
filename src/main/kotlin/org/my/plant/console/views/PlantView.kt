@@ -1,5 +1,6 @@
 package org.my.plant.console.views
 
+import com.sun.prism.paint.Color
 import org.my.plant.console.models.PlantJSONStore
 import org.my.plant.console.models.PlantModel
 
@@ -10,13 +11,14 @@ class PlantView {
         var option: Int
         var input: String?
 
-        println("MAIN MENU")
+        println(" ---------> Plant Tracker Menu <---------")
         println(" 1. Add Plant")
         println(" 2. Update Plant")
         println(" 3. List All Plants")
         println(" 4. Search Plants")
         println(" 5. Delete Plant")
         println(" 6. Filter Plants")
+        println(" 7. Calendar")
         println("-1. Exit")
         println()
         print("Please enter menu option: ")
@@ -55,43 +57,40 @@ class PlantView {
         print("Is plant fragrant (yes/no): ")
         plant.fragrant = readLine()!!
         println("Enter a Plant Colour: ")
-        println("   Red")
-        println("   Green")
-        println("   Blue")
-        println("   Yellow")
-        println("   Black")
-        println("   White")
-        println("   Pink")
-        println("   Purple")
-        println("   Orange")
+        println("   \uD83D\uDFE5Red")
+        println("   \uD83D\uDFE9Green")
+        println("   \uD83D\uDFE6Blue")
+        println("   \uD83D\uDFE8Yellow")
+        println("   ⬛Black")
+        println("   ⬜White")
+        println("   \uD83D\uDFEAPurple")
         plant.colour = readLine()!!
         print("Enter a Plant Height (in cm): ")
         plant.height = readLine()!!
         println("Enter a Plant Category : ")
-        println("   Plant")
-        println("   Flower")
-        println("   Bush")
-        println("   Tree")
+        println("   \uD83C\uDF3FPlant")
+        println("   \uD83C\uDF38Flower")
+        println("   \uD83C\uDF33Tree")
         plant.category = readLine()!!
         println("Enter Hardiness zone: ")
-        println("   zone 1 - (-51 to -45)")
-        println("   zone 2 - (-45 to -40)")
-        println("   zone 3 - (-40 to -35)")
-        println("   zone 4 - (-35 to -29)")
-        println("   zone 5 - (-29 to -23)")
-        println("   zone 6 - (-23 to -18)")
-        println("   zone 7 - (-18 to -12)")
-        println("   zone 8 - (-12 to -7)")
-        println("   zone 9 - (-7 to -1)")
-        println("   zone 10 - (-1 to 4)")
-        println("   zone 11 - (4 to 10)")
-        println("   zone 12 - (10 to 16)")
-        println("   zone 13 - (16 to 21)")
+        println("   zone 1 - ❄️(-51 to -45)")
+        println("   zone 2 - ❄️(-45 to -40)")
+        println("   zone 3 - ❄️(-40 to -35)")
+        println("   zone 4 - ❄️(-35 to -29)")
+        println("   zone 5 - ❄️(-29 to -23)")
+        println("   zone 6 - ❄️(-23 to -18)")
+        println("   zone 7 - ❄️(-18 to -12)")
+        println("   zone 8 - \uD83D\uDCA7(-12 to -7)")
+        println("   zone 9 - \uD83D\uDCA7️(-7 to -1)")
+        println("   zone 10 - ☀️(-1 to 4)")
+        println("   zone 11 - ☀️(4 to 10)")
+        println("   zone 12 - ☀️(10 to 16)")
+        println("   zone 13 - ☀️(16 to 21)")
         plant.zone = readLine()!!
         println("Enter Light requirements: ")
-        println("   full-sun -> (6-10 hrs/day)")
-        println("   part-sun -> (3-6 hrs/day)")
-        println("   shade -> (1-3hrs/day)")
+        println("   ☀️full-sun -> (6-10 hrs/day)")
+        println("   \uD83C\uDF24part-sun -> (3-6 hrs/day)")
+        println("   ☁️shade -> (1-3hrs/day)")
         plant.light = readLine()!!
         println("Enter a Plant Season")
         plant.season = readLine()!!
@@ -149,6 +148,10 @@ class PlantView {
     //TO DO...
     fun filter(plant: PlantModel) {
     }
+    //TO DO...
+    fun calendar(plant: PlantModel) {
+        println("MAIN MENU")
+    }
 
     fun getId() : Long {
 
@@ -162,4 +165,5 @@ class PlantView {
             -9
         return searchId
     }
+
 }

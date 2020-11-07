@@ -27,6 +27,7 @@ class PlantController {
                 4 -> search()
                 5 -> delete()
                 6 -> filter()
+                7 -> calendar()
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
             }
@@ -99,14 +100,10 @@ class PlantController {
             println("Plant Not Deleted...")
     }
 
-    // TO DO
+    // TO DO... (filter plants by type, season, colour, HZ, light requirements and so on)
     fun filter() {
     }
+    //TO DO... ( adding watering and fertilizing schedule for each plant type/category)
+    fun calendar() {
+    }
 }
-
-//        var sc = Scanner(System.`in`)
-//        var num = sc.nextInt()
-//        println(num)
-
-//        var num1 = readLine()
-//        println(num1)

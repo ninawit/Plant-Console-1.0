@@ -1,17 +1,5 @@
 [
   {
-    "id": -3993984825587283199,
-    "name": "Cherry",
-    "type": "Outdoor",
-    "fragrant": "",
-    "colour": "",
-    "height": "",
-    "category": "",
-    "zone": "9a",
-    "light": "full sun",
-    "season": ""
-  },
-  {
     "id": -7730861179652696669,
     "name": "Narcissuss",
     "type": "Outdoor",
@@ -36,30 +24,6 @@
     "season": ""
   },
   {
-    "id": -6725805347924721324,
-    "name": "Rose",
-    "type": "Outdoor",
-    "fragrant": "",
-    "colour": "",
-    "height": "",
-    "category": "",
-    "zone": "6a",
-    "light": "full sun",
-    "season": ""
-  },
-  {
-    "id": 8026162675746557228,
-    "name": "test",
-    "type": "outdoor",
-    "fragrant": "yes",
-    "colour": "pink",
-    "height": "25",
-    "category": "flower",
-    "zone": "9",
-    "light": "full sun",
-    "season": "spring, summer"
-  },
-  {
     "id": -5781674083518820977,
     "name": "test2",
     "type": "indoor",
@@ -70,5 +34,41 @@
     "zone": "na",
     "light": "part sun",
     "season": "na"
+  },
+  {
+    "id": 8907702338536501855,
+    "name": "Rose",
+    "type": "Outdoor",
+    "fragrant": "yes",
+    "colour": "Red",
+    "height": "90",
+    "category": "Flower",
+    "zone": "9",
+    "light": "full-sun",
+    "season": "sprin, summer"
+  },
+  {
+    "id": -7215113906482032108,
+    "name": "Daliah ssp",
+    "type": "Outdoor",
+    "fragrant": "yes",
+    "colour": "pint",
+    "height": "95",
+    "category": "flower",
+    "zone": "7,8,9,10",
+    "light": "full-sun",
+    "season": "summer,fall"
+  },
+  {
+    "id": 2417310166014213980,
+    "name": "Tulip",
+    "type": "Outdoor",
+    "fragrant": "no",
+    "colour": "blue",
+    "height": "30",
+    "category": "flower",
+    "zone": "8,9",
+    "light": "part-sun",
+    "season": "spring"
   }
 ]

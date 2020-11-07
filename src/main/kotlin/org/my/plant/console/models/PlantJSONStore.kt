@@ -10,7 +10,6 @@ import java.util.*
 
 private val logger = KotlinLogging.logger {}
 
-//declarations:
 val JSON_FILE = "plants.json" //this is where data is stored
 val gsonBuilder = GsonBuilder().setPrettyPrinting().create() //from google libraries
 val listType = object : TypeToken<ArrayList<PlantModel>>() {}.type //telling google library what we want it convert it to and from
@@ -64,10 +63,13 @@ class PlantJSONStore : PlantStore {
         plants.remove(plant)
         serialize()
     }
-    // TO DO....
+    //TO DO....
     override fun filter(plant: PlantModel){
-        plants.filter { PlantModel -> true }
-        serialize()
+
+    }
+    //TO DO...
+    override fun calendar(plant: PlantModel){
+
     }
 
     internal fun logAll() {
